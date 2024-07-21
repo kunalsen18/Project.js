@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: blue;
+    overflow: hidden;
+}
+
+.Game_con{
+    background-image: url(Bg\ game\ image.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-size: 100vw 100vh;
+}
+
+.dino{
+    background-image: url(dino2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    
+}
+
+.obstacle{
+    background-image: url(dragon2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 45vw;
+
+}
+
+.heading{
+    position: relative;
+    top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(143, 18, 174);
+}
+
+.instruction{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.Game_over{
+    visibility: hidden;
+    position: relative;
+    top: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(187, 24, 24);
+}
+
+#reset_btn{
+    visibility: hidden;
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+
+}
+
+.rst_btn{
+    position: relative;
+    top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#score_count{
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: black;
+    color: aquamarine;
+    border-radius: 1rem;
+    
+}
+
+.dino_animated{
+    animation: dino 0.8s ease-out;
+}
+
+.obstacle_animate{
+    animation: obstacle_animate 3.5s linear infinite;
+}
+
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+
+    50%{
+        bottom: 400px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes obstacle_animate{
+    0%{
+        left: 100vw;
+    }
+
+    100%{
+        left: -10vw;
+    }
+}
